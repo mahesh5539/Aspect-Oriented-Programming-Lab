@@ -1,0 +1,27 @@
+
+	<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<aop:aspectj-autoproxy />
+	<bean name="secret" class="edu.sjsu.cmpe275.lab1.Secret">
+	<property name="userId" value="Alice" />
+	<property name="secret" value="My name is Raj" />
+	<property name="secretId" value="2d9733ff-e806-4bde-986d-0bd5f7d1f7a4"></property>
+</bean>
+	
+	<bean name="secretServiceImpl"  class="edu.sjsu.cmpe275.lab1.SecretServiceImpl"/>
+	<bean name="aopsecretservice"  class="edu.sjsu.cmpe275.lab1.aspectj.AOPSecretServiceAspect"/>
+
+</beans>
