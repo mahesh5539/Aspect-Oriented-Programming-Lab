@@ -1,0 +1,68 @@
+1)testA
+Bob can read the secret
+Bob completed the reading of secret
+
+2)testB
+Alice can share secret with user Bob
+Alice shared secret with user Bob
+Bob can read the secret
+Bob completed the reading of secret
+
+3)testC
+Alice can share secret with user Bob
+Alice shared secret with user Bob
+Bob can share secret with user Carl
+Bob shared secret with user Bob
+Read Operation failed: Exception 
+
+4)testD
+Alice can share secret with user Bob
+Alice shared secret with user Bob
+Share Operation failed: Exception
+
+5)testE
+testE
+Alice can share secret with user Bob
+Alice shared secret with user Bob
+Bob can share secret with user Carl
+Bob shared secret with user Carl
+Alice can unshare secret with userCarl
+Alice unshared secret with userCarl
+Read Operation failed: Exception
+
+6)testF
+Alice can share secret with user Bob
+Alice shared secret with user Bob
+Alice can share secret with user Carl
+Alice shared secret with user Carl
+Carl can share secret with user Bob
+Carl shared secret with user Bob
+Alice can unshare secret with userBob
+Alice unshared secret with userBob
+Read Operation failed: Exception
+
+7)testG
+Alice can share secret with user Bob
+Alice shared secret with user Bob
+Bob can share secret with user Carl
+Bob shared secret with user Carl
+Bob cannot unshare secret shared with Carl
+Carl can read the secret
+Carl completed the reading of secret
+
+8)testH
+Alice can share secret with user Bob
+Alice shared secret with user Bob
+Unshare Operation failed: Exception
+
+9)testI
+Alice can share secret with user Bob
+Alice shared secret with user Bob
+Bob can share secret with user Carl
+Bob shared secret with user Carl
+Alice can unshare secret with userBob
+Alice unshared secret with userBob
+Share Operation failed: Exception 
+
+10)testJ
+Got two different UUIDs for two different secrets
